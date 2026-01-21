@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects | Emma Butner</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .projects-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #788978;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-date {
+            flex: 0 0 120px;
+            text-align: right;
+            padding-right: 30px;
+            color: #788978;
+            font-weight: bold;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 20px;
+            background: #F8FAF9;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #D9D3C6;
+            border: 3px solid #788978;
+            border-radius: 50%;
+        }
+        
+        .timeline-content h3 {
+            color: #2F362F;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .lab-info {
+            color: #788978;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .contributions {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #D9D3C6;
+        }
+        
+        .contributions h4 {
+            color: #788978;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .contributions ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        
+        .contributions li {
+            margin-bottom: 5px;
+        }
+        
+        /* Interactive demos section */
+        .demos-section {
+            background: #F8FAF9;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .demo-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .demo-icon {
+            font-size: 2.5rem;
+            color: #788978;
+            margin-bottom: 15px;
+        }
+        
+        .demo-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #788978;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-button:hover {
+            background: #2F362F;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-date {
+                text-align: left;
+                padding-left: 40px;
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .timeline-content {
+                margin-left: 40px;
+            }
+            
+            .timeline-content:before {
+                left: -30px;
+            }
+        }
+        
+        /* Remove the pink notes */
+        .pink-notes {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research Projects</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="websites.html">Websites</a>
+            <a href="experiment.html">Projects</a>
+            <a href="p&p.html">Posters & Publications</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="projects-container">
+            <p>This page showcases my research experience across multiple laboratories, demonstrating my growth as a cognitive psychology researcher with skills in experimental design, data analysis, and project management.</p>
+            
+            <!-- Research Timeline -->
+            <div class="timeline">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date"><em>In Progress</em></div>
+                        <div class="timeline-content">
+                            <h3>Recalibration of Space and Time</h3>
+                            <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <p>Testing how the relationship between space and time changes after exposure to mismatched optic flow and biomechanical walking speed while walking around.</p>
+                            <div class="contributions">
+                                <ul>
+                                    <strong>Poster</strong>
+                                    <li><strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H. (April, 2025). Effects of Perceptual-Motor Recalibration on Time Perception in Virtual Reality. Presented at the University of Utah College of Social and Behavioral Science Research Day 2025, Salt Lake City, Utah.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date"><em>In Progress</em></div>
+                        <div class="timeline-content">
+                            <h3>STEP Arousal Project</h3>
+                            <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <p>Testing how the relationship between space and time changes during exposure to different levels of arousing images.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date"><em>In Progress</em></div>
+                        <div class="timeline-content">
+                            <h3>STEP Valence Project</h3>
+                            <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <p>Testing how the relationship between space and time changes during exposure to different levels of valenced images.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <div class="timeline-content">
+                            <h3>STEP VR Project</h3>
+                            <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <p>Using VR to test the long controversy of how and whether space and time are related to each other.</p>
+                            <div class="contributions">
+                                <ul>
+                                    <video width="100%" controls poster="images/step-poster.jpg">
+                                        <source src="images/STEPOG.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <strong>Paper</strong>
+                                    <li>Detrich, A., <strong>Butner, E.</strong>, Creem-Regher, S. H., Stefanucci, J. K. (<em>In Preparation</em>). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates.</li>
+                                    <strong>Posters</strong>
+                                    <li>Detrich, A., <strong>Butner, E.</strong>, Kuper, K., Ruiz, D., Stefanucci, J. K., Creem-Regehr, S. H. (April, 2025). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates. Presented at the University of Utah College of Social and Behavioral Science Research Day 2025, Salt Lake City, Utah.</li>
+                                    <li>Detrich, A., Whitaker, M., <strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H. (Nov, 2024). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates. Presented at the Psychonomic Society 65th Annual Meeting, New York City, New York.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <div class="timeline-content">
+                            <h3>Digital Phenotyping Dataset</h3>
+                            <div class="lab-info">Behavioral Health Innovation and Dissemination Center (BHIDC) | University of Utah</div>
+                            <p>Built a large-scale multimodal dataset combining smartphone sensor data, audio recordings, and behavioral assessments to study digital biomarkers of mental health.</p>
+                            <div class="contributions">
+                                <ul>
+                                    <strong>Paper</strong>
+                                    <li>Kilshaw, R. E., Boggins, A., Everett, O., <strong>Butner, E.</strong>, Leifker, F. R., & Baucom, B. R. (2024). Benchmarking Mental Health Status Using Passive Sensor Data: Protocol for a Prospective Observational Study. JMIR Research Protocols, 13(1), e53857.</li>
+                                    <strong>Posters</strong>
+                                    <li>Kilshaw, R.E., <strong>Butner, E.</strong>, Boggins, A., Leifker, F. R., Baucom, B. R. W. (May, 2025). Investigating the Utility of Smartphone Passive Sensor Data for Predicting Mental Health Risk in Community Dwelling Adults. Presented at the 2025 ABCT Technology and Behavior Change Special Interest Group</li>
+                                    <li>Kilshaw, R. E., <strong>Butner, E.</strong>, Boggins, A., Everett, O., Leifker, F. R., Baucom, B. R. W. (May, 2024). Using Passive Sensor Data to Enhance Mental Health Risk Assessment in Community-Dwelling Adults: Protocol for a Prospective Observational Study. Presented at the 2024 APS Annual Convention, San Francisco, CA.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <div class="timeline-content">
+                            <h3>Game Development for MDD & Trauma</h3>
+                            <div class="lab-info">CACTUs Lab | Palo Alto University</div>
+                            <p>Developed a therapeutic game narrative on qualtrics to help individuals with depression and trauma practice healthy decision-making in simulated social situations.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>MDD Treatment Preferences</h3>
+                            <div class="lab-info">CACTUs Lab | Palo Alto University</div>
+                            <p>Explored treatment decision-making for Major Depressive Disorder, investigating what factors influence patient preferences between psychotherapy, medication, and combination treatments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Staying in Touch and Engaged Project (STEP)</h3>
+                            <div class="lab-info">Harm Reduction Research and Treatment (HaRRT) Center | University of Washington</div>
+                            <p>Studied recovery outcomes in Housing First communities, focusing on how social connections and meaningful activities (beyond just stable housing) support sustained recovery from substance use disorders.</p>
+                            <div class="contributions">
+                                <ul>
+                                    <strong>Paper</strong>
+                                    <li>Frohe, T., <strong>Butner, E.</strong>, Kolde, S., Bhambu, P., Leemon, G., Taylor, E. M., David, A., Eikeng, I., Hu, S., Wu, Y., Zhao, M., Seo, G., Hamdy, N. W., Cohn, E. B., Clifasefi, S. L., & Collins, S. E. (<em>In Preparation</em>) Conventional content analysis of Housing First residents’ preferred activities and service needs during the COVID-19 pandemic. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Sexual Harassment & Victim Prototypicality</h3>
+                            <div class="lab-info">Social Identity Lab (SiLab) | University of Washington</div>
+                            <p>Investigated how perceptions of sexual harassment cases change based on how well victims fit stereotypes of "ideal victims" in workplace settings.</p>
+                            <div class="contributions">
+                                <ul>
+                                    <strong>Paper Acknowledgement</strong>
+                                    <li>Schachtman, R., & Kaiser, C. R. (2024). Bystanders’ thresholds for intervention in Black vs. White women’s sexual harassment. Plos one, 19(2), e0296755.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Understanding Intersectional Identities</h3>
+                            <div class="lab-info">Social Identity Lab (SiLab) | University of Washington</div>
+                            <p>Examined how multiple social identities interact in discrimination cases to influence juror perceptions of credibility and responsibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <h2>Contact me:</h2> 
+            <a href="mailto:ebutner06@gmail.com" target="_blank">ebutner06@gmail.com</a>
+            <a href="https://www.linkedin.com/in/emma-butner/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
