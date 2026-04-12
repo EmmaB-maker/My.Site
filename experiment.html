@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Search bar */
+        .search-container {
+            max-width: 1000px;
+            margin: 20px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        #project-search {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid #D9D3C6;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #project-search:focus {
+            border-color: #788978;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #788978;
+            font-style: italic;
+            display: none;
+        }
+        
         .projects-container {
             max-width: 1000px;
             margin: 30px auto;
@@ -189,6 +218,7 @@
         <h1>Research Projects</h1>
         <nav>
             <a href="home.html">Home</a>
+            <a href="aboutme.html">About Me</a>
             <a href="websites.html">Websites</a>
             <a href="experiment.html">Projects</a>
             <a href="p&p.html">Posters & Publications</a>
@@ -196,17 +226,36 @@
     </header>
 
     <main>
+        <div class="search-container">
+            <input type="text" id="project-search" placeholder="Search Bar">
+        </div>
+        
         <div class="projects-container">
             <p>This page showcases my research experience across multiple laboratories, demonstrating my growth as a cognitive psychology researcher with skills in experimental design, data analysis, and project management.</p>
             
+            <div id="no-results" class="no-results">
+                No matching projects found. 
+                Try a different search term.
+            </div>
             <!-- Research Timeline -->
             <div class="timeline">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date"><em>In Progress</em></div>
+                        <div class="timeline-date"><em>2026 - In Progress</em></div>
                         <div class="timeline-content">
-                            <h3>Recalibration of Space and Time</h3>
+                            <h3>SNAC</h3>
                             <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <div class="lab-info"><em>Collaborators:</em> Alex Detrich, MA; Jason Watson, PhD (UC Denver); Jeanine Stefanucci, PhD; Sarah Creem-Regehr, PhD</div>
+                            <p>Understanding how the image setting (nature versus urban) and the arousal level (high versus low) influences perceived event durations.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date"><em>2025 - In Progress</em></div>
+                        <div class="timeline-content">
+                            <h3>Recalibration of Space and Time (<em>Master's Project</em>)</h3>
+                            <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <div class="lab-info"><em>Collaborators:</em> Jeanine Stefanucci, PhD; Sarah Creem-Regehr, PhD; Lauren Buck, PhD (Games Department)</div>
                             <p>Testing how the relationship between space and time changes after exposure to mismatched optic flow and biomechanical walking speed while walking around.</p>
                             <div class="contributions">
                                 <ul>
@@ -218,20 +267,12 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <div class="timeline-date"><em>In Progress</em></div>
+                        <div class="timeline-date"><em>2025 - In Progress</em></div>
                         <div class="timeline-content">
                             <h3>STEP Arousal Project</h3>
                             <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <div class="lab-info"><em>Collaborators:</em> Alex Detrich, MA; Jeanine Stefanucci, PhD, Sarah Creem-Regehr, PhD</div>
                             <p>Testing how the relationship between space and time changes during exposure to different levels of arousing images.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date"><em>In Progress</em></div>
-                        <div class="timeline-content">
-                            <h3>STEP Valence Project</h3>
-                            <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
-                            <p>Testing how the relationship between space and time changes during exposure to different levels of valenced images.</p>
                         </div>
                     </div>
                     
@@ -240,15 +281,12 @@
                         <div class="timeline-content">
                             <h3>STEP VR Project</h3>
                             <div class="lab-info">Vision, Audition, Action in Space & Time (VAAST) Lab | University of Utah</div>
+                            <div class="lab-info"><em>Collaborators:</em> Alex Detrich, MA; Jeanine Stefanucci, PhD, Sarah Creem-Regehr, PhD</div>
                             <p>Using VR to test the long controversy of how and whether space and time are related to each other.</p>
                             <div class="contributions">
                                 <ul>
-                                    <video width="100%" controls poster="images/step-poster.jpg">
-                                        <source src="images/STEPOG.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
                                     <strong>Paper</strong>
-                                    <li>Detrich, A., <strong>Butner, E.</strong>, Creem-Regher, S. H., Stefanucci, J. K. (<em>In Preparation</em>). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates.</li>
+                                    <li>Detrich, A., <strong>Butner, E.</strong>, Creem-Regher, S. H., Stefanucci, J. K. (<em>In Preparation</em>). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates. <em>TAP</em></li>
                                     <strong>Posters</strong>
                                     <li>Detrich, A., <strong>Butner, E.</strong>, Kuper, K., Ruiz, D., Stefanucci, J. K., Creem-Regehr, S. H. (April, 2025). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates. Presented at the University of Utah College of Social and Behavioral Science Research Day 2025, Salt Lake City, Utah.</li>
                                     <li>Detrich, A., Whitaker, M., <strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H. (Nov, 2024). Let’s get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates. Presented at the Psychonomic Society 65th Annual Meeting, New York City, New York.</li>
@@ -262,11 +300,13 @@
                         <div class="timeline-content">
                             <h3>Digital Phenotyping Dataset</h3>
                             <div class="lab-info">Behavioral Health Innovation and Dissemination Center (BHIDC) | University of Utah</div>
+                            <div class="lab-info"><em>Collaborators:</em> Robyn Kilshaw, PhD; Brian Baucom, PhD</div>
                             <p>Built a large-scale multimodal dataset combining smartphone sensor data, audio recordings, and behavioral assessments to study digital biomarkers of mental health.</p>
                             <div class="contributions">
                                 <ul>
-                                    <strong>Paper</strong>
+                                    <strong>Papers</strong>
                                     <li>Kilshaw, R. E., Boggins, A., Everett, O., <strong>Butner, E.</strong>, Leifker, F. R., & Baucom, B. R. (2024). Benchmarking Mental Health Status Using Passive Sensor Data: Protocol for a Prospective Observational Study. JMIR Research Protocols, 13(1), e53857.</li>
+                                    <li>Kilshaw, R. E., <strong>Butner, E.</strong>, Butner, J. E., Boggins, A., Leifker, F. R., de Lacy, N., Baucom, B. R. W. (In Preparation) Using Smartphone Passive Sensor Data to Enhance Mental Health Risk Assessment in Community-Dwelling Adults. JCCP</li>
                                     <strong>Posters</strong>
                                     <li>Kilshaw, R.E., <strong>Butner, E.</strong>, Boggins, A., Leifker, F. R., Baucom, B. R. W. (May, 2025). Investigating the Utility of Smartphone Passive Sensor Data for Predicting Mental Health Risk in Community Dwelling Adults. Presented at the 2025 ABCT Technology and Behavior Change Special Interest Group</li>
                                     <li>Kilshaw, R. E., <strong>Butner, E.</strong>, Boggins, A., Everett, O., Leifker, F. R., Baucom, B. R. W. (May, 2024). Using Passive Sensor Data to Enhance Mental Health Risk Assessment in Community-Dwelling Adults: Protocol for a Prospective Observational Study. Presented at the 2024 APS Annual Convention, San Francisco, CA.</li>
@@ -280,6 +320,7 @@
                         <div class="timeline-content">
                             <h3>Game Development for MDD & Trauma</h3>
                             <div class="lab-info">CACTUs Lab | Palo Alto University</div>
+                            <div class="lab-info"><em>Collaborators:</em> Hillary Kingman, PhD; Yan Leykin, PhD</div>
                             <p>Developed a therapeutic game narrative on qualtrics to help individuals with depression and trauma practice healthy decision-making in simulated social situations.</p>
                         </div>
                     </div>
@@ -289,6 +330,7 @@
                         <div class="timeline-content">
                             <h3>MDD Treatment Preferences</h3>
                             <div class="lab-info">CACTUs Lab | Palo Alto University</div>
+                            <div class="lab-info"><em>Collaborators:</em> Haley Raybin; Yan Leykin, PhD</div>
                             <p>Explored treatment decision-making for Major Depressive Disorder, investigating what factors influence patient preferences between psychotherapy, medication, and combination treatments.</p>
                         </div>
                     </div>
@@ -297,6 +339,7 @@
                         <div class="timeline-date">2022 - 2023</div>
                         <div class="timeline-content">
                             <h3>Staying in Touch and Engaged Project (STEP)</h3>
+                            <div class="lab-info"><em>Collaborators:</em> Tessa Frohe, PhD; Seema Clifasefi, PhD; Susan Collins, PhD</div>
                             <div class="lab-info">Harm Reduction Research and Treatment (HaRRT) Center | University of Washington</div>
                             <p>Studied recovery outcomes in Housing First communities, focusing on how social connections and meaningful activities (beyond just stable housing) support sustained recovery from substance use disorders.</p>
                             <div class="contributions">
@@ -313,6 +356,7 @@
                         <div class="timeline-content">
                             <h3>Sexual Harassment & Victim Prototypicality</h3>
                             <div class="lab-info">Social Identity Lab (SiLab) | University of Washington</div>
+                            <div class="lab-info"><em>Collaborators:</em> Rebecca Schachtman, PhD; Cheryl Kaiser, PhD</div>
                             <p>Investigated how perceptions of sexual harassment cases change based on how well victims fit stereotypes of "ideal victims" in workplace settings.</p>
                             <div class="contributions">
                                 <ul>
@@ -328,6 +372,7 @@
                         <div class="timeline-content">
                             <h3>Understanding Intersectional Identities</h3>
                             <div class="lab-info">Social Identity Lab (SiLab) | University of Washington</div>
+                            <div class="lab-info"><em>Collaborators:</em> Z. Ferguson, PhD; Cheryl Kaiser, PhD</div>
                             <p>Examined how multiple social identities interact in discrimination cases to influence juror perceptions of credibility and responsibility.</p>
                         </div>
                     </div>
@@ -344,5 +389,30 @@
             <a href="https://github.com/yourusername" target="_blank">GitHub</a>
         </div>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('project-search');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const noResultsDiv = document.getElementById('no-results');
+
+        function filterProjects() {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            timelineItems.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            noResultsDiv.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('input', filterProjects);
+    </script>
 </body>
 </html>

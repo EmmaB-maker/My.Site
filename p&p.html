@@ -6,6 +6,35 @@
     <title>Posters & Publications</title>
     <link rel="stylesheet" href="home.css">
     <style>
+        /* Search bar for posters */
+        .poster-search-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        #poster-search {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid #D9D3C6;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #poster-search:focus {
+            border-color: #788978;
+        }
+
+        .poster-no-results {
+            text-align: center;
+            padding: 40px;
+            color: #788978;
+            font-style: italic;
+            display: none;
+        }
+
         .papers-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -69,53 +98,51 @@
         }
 
         .poster-card {
-            height: 500px;
-            cursor: pointer;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .poster-card-inner {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .poster-card.flipped .poster-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .poster-front, .poster-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-        }
-
-        .poster-front {
-            background: white;
-        }
-
-        .poster-back {
             background: #2F362F;
             color: white;
-            transform: rotateY(180deg);
             padding: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            min-height: 200px;
+        }
+
+        .poster-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .poster-info {
             text-align: center;
         }
 
-        /* Force all poster images to same height */
-        .poster-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This will crop if needed */
-            border: none !important;
+        .poster-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #D9D3C6;
+        }
+
+        .poster-authors {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .poster-conference {
+            color: #788978;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .poster-year {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-top: 10px;
         }
 
         /* Buttons for both front and back */
@@ -315,14 +342,15 @@
         <h1>Posters & Publications</h1>
         <nav>
             <a href="home.html">Home</a>
+            <a href="aboutme.html">About Me</a>
             <a href="websites.html">Websites</a>
             <a href="experiment.html">Projects</a>
-            <a href="p&p.html">Posters and Publications</a>
+            <a href="p&p.html">Posters & Publications</a>
         </nav>
     </header>
 
     <main>
-        <div class="papers-container">
+            <div class="papers-container">
             <!-- Published Papers Column -->
             <div class="paper-column">
                 <h2>Published Papers</h2>
@@ -336,6 +364,7 @@
                     <div class="title">Benchmarking Mental Health Status Using Passive Sensor Data: Protocol for a Prospective Observational Study.</div>
                     <div class="journal">JMIR Research Protocols, 13(1), e53857.</div>
                     <em>Click to see the abstract.</em>
+                    <br><strong><em>Project:</em></strong> Digital Phenotyping Dataset
                 </div>
             </div>
             
@@ -347,12 +376,28 @@
                     <div class="authors">Detrich, A., <strong>Butner, E.</strong>, Creem-Regher, S. H., Stefanucci, J. K.</div>
                     <div class="year">(in preparation)</div>
                     <div class="title">Let's get the ball rolling: Implementing the use of immersive virtual reality in space and time perceptual estimates.</div>
+                    <strong><em>Project:</em></strong> STEP VR Project
                 </div>
                 
                 <div class="publication">
                     <div class="authors">Frohe, T., <strong>Butner, E.</strong>, Kolde, S., Bhambu, P., Leemon, G., Taylor, E. M., David, A., Eikeng, I., Hu, S., Wu, Y., Zhao, M., Seo, G., Hamdy, N. W., Cohn, E. B., Clifasefi, S. L., & Collins, S. E.</div>
                     <div class="year">(in preparation)</div>
                     <div class="title">Conventional content analysis of Housing First residents' preferred activities and service needs during the COVID-19 pandemic.</div>
+                    <strong><em>Project:</em></strong> Staying in Touch and Engaged Project (STEP)
+                </div>
+
+                <div class="publication">
+                    <div class="authors">Kilshaw, R. E., <strong>Butner, E.</strong>, Butner, J. E., Boggins, A., Leifker, F. R., de Lacy, N., Baucom, B. R. W.</div>
+                    <div class="year">(in preparation)</div>
+                    <div class="title">Using Smartphone Passive Sensor Data to Enhance Mental Health Risk Assessment in Community-Dwelling Adults.</div>
+                    <strong><em>Project:</em></strong> Digital Phenotyping Dataset (Methods paper)
+                </div>
+
+                <div class="publication">
+                    <div class="authors">Frohe, T., <strong>Butner, E.</strong>, Taylor, E. M., Yu, A., Shinagawa, E., Siegel, A., Nguyen, H., Kolde, S., Bhambu, P., Childs, T., Davis, A., Collins, S. E., & Clifasefi, S. L. </div>
+                    <div class="year">(in preparation)</div>
+                    <div class="title">Connecting Housing First To Digital Health: Insights From Residents On Technology And Harm Reduction</div>
+                    <strong><em>Project:</em></strong> STaHR project <em>(not on projects page: I only helped with the paper)</em>
                 </div>
             </div>
         </div>
@@ -360,173 +405,89 @@
         <section class="section conference">
             <h2>Conference Posters</h2>
             <p><em><span class="presenting-badge">+</span> indicates presenting author</em></p>
+            <div class="poster-search-container">
+                <input type="text" id="poster-search" placeholder="Search bar">
+            </div>
+            <div id="poster-no-results" class="poster-no-results">No matching posters found. Try a different search term.</div>
             
             <div class="poster-gallery">
                 <!-- Poster 1 -->
-                <div class="poster-card" id="poster-0">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/may25.png" alt="May 2025 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(0)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(0)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(0)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(0)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Investigating the Utility of Smartphone Passive Sensor Data for Predicting Mental Health Risk in Community Dwelling Adults</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> Kilshaw, R.E., <strong>Butner, E.</strong>, Boggins, A., Leifker, F. R., Baucom, B. R. W.</div>
-                                <div class="poster-conference">ABCT Technology and Behavior Change SIG</div>
-                                <div class="poster-year">May 2025</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="0">
+                    <div class="poster-info">
+                        <div class="poster-title">Investigating the Utility of Smartphone Passive Sensor Data for Predicting Mental Health Risk in Community Dwelling Adults</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> Kilshaw, R.E., <strong>Butner, E.</strong>, Boggins, A., Leifker, F. R., Baucom, B. R. W.</div>
+                        <div class="poster-conference">ABCT Technology and Behavior Change SIG</div>
+                        <div class="poster-year">May 2025</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 2 -->
-                <div class="poster-card" id="poster-1">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/apr25-me.png" alt="April 2025 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(1)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(1)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(1)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(1)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Effects of Perceptual-Motor Recalibration on Time Perception in Virtual Reality</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> <strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H.</div>
-                                <div class="poster-conference">University of Utah Research Day</div>
-                                <div class="poster-year">April 2025</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="1">
+                    <div class="poster-info">
+                        <div class="poster-title">Effects of Perceptual-Motor Recalibration on Time Perception in Virtual Reality</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> <strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H.</div>
+                        <div class="poster-conference">University of Utah Research Day</div>
+                        <div class="poster-year">April 2025</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 3 -->
-                <div class="poster-card" id="poster-2">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/apr25-alex.png" alt="April 2025 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(2)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(2)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(2)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(2)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Let's get the ball rolling: Implementing immersive VR in space and time perceptual estimates</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> Detrich, A., <strong>Butner, E.</strong>, Kuper, K., Ruiz, D., Stefanucci, J. K., Creem-Regehr, S. H.</div>
-                                <div class="poster-conference">University of Utah Research Day</div>
-                                <div class="poster-year">April 2025</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="2">
+                    <div class="poster-info">
+                        <div class="poster-title">Let's get the ball rolling: Implementing immersive VR in space and time perceptual estimates</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> Detrich, A., <strong>Butner, E.</strong>, Kuper, K., Ruiz, D., Stefanucci, J. K., Creem-Regehr, S. H.</div>
+                        <div class="poster-conference">University of Utah Research Day</div>
+                        <div class="poster-year">April 2025</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 4 -->
-                <div class="poster-card" id="poster-3">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/nov24.png" alt="November 2024 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(3)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(3)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(3)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(3)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Let's get the ball rolling: Implementing immersive VR in space and time perceptual estimates</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> Detrich, A., Whitaker, M., <strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H.</div>
-                                <div class="poster-conference">Psychonomic Society</div>
-                                <div class="poster-year">November 2024</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="3">
+                    <div class="poster-info">
+                        <div class="poster-title">Let's get the ball rolling: Implementing immersive VR in space and time perceptual estimates</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> Detrich, A., Whitaker, M., <strong>Butner, E.</strong>, Stefanucci, J. K., Creem-Regehr, S. H.</div>
+                        <div class="poster-conference">Psychonomic Society</div>
+                        <div class="poster-year">November 2024</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 5 -->
-                <div class="poster-card" id="poster-4">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/may24.png" alt="May 2024 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(4)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(4)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(4)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(4)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Using Passive Sensor Data to Enhance Mental Health Risk Assessment in Community-Dwelling Adults</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> Kilshaw, R. E., <strong>Butner, E.</strong>, Boggins, A., Everett, O., Leifker, F. R., Baucom, B. R. W.</div>
-                                <div class="poster-conference">APS Annual Convention</div>
-                                <div class="poster-year">May 2024</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="4">
+                    <div class="poster-info">
+                        <div class="poster-title">Using Passive Sensor Data to Enhance Mental Health Risk Assessment in Community-Dwelling Adults</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> Kilshaw, R. E., <strong>Butner, E.</strong>, Boggins, A., Everett, O., Leifker, F. R., Baucom, B. R. W.</div>
+                        <div class="poster-conference">APS Annual Convention</div>
+                        <div class="poster-year">May 2024</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 6 -->
-                <div class="poster-card" id="poster-5">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/mar24.png" alt="March 2024 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(5)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(5)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(5)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(5)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Avoiding the scream-ic route: navigational biases in dynamic threat environments</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> Detrich, A., <strong>Butner, E.</strong>, Creem-Regehr, S. H., Stefanucci, J. K.</div>
-                                <div class="poster-conference">Society for Affective Science</div>
-                                <div class="poster-year">March 2024</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="5">
+                    <div class="poster-info">
+                        <div class="poster-title">Avoiding the scream-ic route: navigational biases in dynamic threat environments</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> Detrich, A., <strong>Butner, E.</strong>, Creem-Regehr, S. H., Stefanucci, J. K.</div>
+                        <div class="poster-conference">Society for Affective Science</div>
+                        <div class="poster-year">March 2024</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 7 -->
-                <div class="poster-card" id="poster-6">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/may23.jpg" alt="May 2023 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(6)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(6)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(6)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(6)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Emotional Correlations During Observation of a Traumatic Event</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> <strong>Butner, E.</strong>, Ferguson, Z.E., Kaiser, C.</div>
-                                <div class="poster-conference">UW Undergraduate Research Symposium</div>
-                                <div class="poster-year">May 2023</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="6">
+                    <div class="poster-info">
+                        <div class="poster-title">Emotional Correlations During Observation of a Traumatic Event</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> <strong>Butner, E.</strong>, Ferguson, Z.E., Kaiser, C.</div>
+                        <div class="poster-conference">UW Undergraduate Research Symposium</div>
+                        <div class="poster-year">May 2023</div>
                     </div>
                 </div>
-                
+
                 <!-- Poster 8 -->
-                <div class="poster-card" id="poster-7">
-                    <div class="poster-card-inner">
-                        <div class="poster-front">
-                            <img src="images/apr23.png" alt="April 2023 Poster" class="poster-image">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(7)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(7)">🔄</button>
-                        </div>
-                        <div class="poster-back">
-                            <button class="zoom-btn" onclick="event.stopPropagation(); openPosterModal(7)">🔍</button>
-                            <button class="flip-btn" onclick="event.stopPropagation(); flipCard(7)">🔄</button>
-                            <div class="poster-details">
-                                <div class="poster-title">Emotion Correlations Underlying an Adverse Event</div>
-                                <div class="poster-authors"><span class="presenting-badge">+</span> <strong>Butner, E.</strong></div>
-                                <div class="poster-conference">Western Psychological Association</div>
-                                <div class="poster-year">April 2023</div>
-                            </div>
-                        </div>
+                <div class="poster-card" data-poster-index="7">
+                    <div class="poster-info">
+                        <div class="poster-title">Emotion Correlations Underlying an Adverse Event</div>
+                        <div class="poster-authors"><span class="presenting-badge">+</span> <strong>Butner, E.</strong></div>
+                        <div class="poster-conference">Western Psychological Association</div>
+                        <div class="poster-year">April 2023</div>
                     </div>
                 </div>
             </div>
@@ -646,6 +607,32 @@
             }
         ];
 
+        // Poster search functionality
+        const posterSearch = document.getElementById('poster-search');
+        const posterCards = document.querySelectorAll('.poster-card');
+        const posterNoResults = document.getElementById('poster-no-results');
+
+        function filterPosters() {
+            const searchTerm = posterSearch.value.toLowerCase();
+            let visibleCount = 0;
+
+            posterCards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            posterNoResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        if (posterSearch) {
+            posterSearch.addEventListener('input', filterPosters);
+        }
+
         let currentZoom = 1;
 
         // Flip card function
@@ -708,16 +695,11 @@
             document.getElementById('modal-poster-image').style.transform = `scale(${currentZoom})`;
         }
 
-        // Close modals when clicking outside
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                    if (this.id === 'poster-modal') {
-                        resetZoom();
-                    }
-                }
+        // Click on poster card opens zoom modal
+        document.querySelectorAll('.poster-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-poster-index'));
+                openPosterModal(index);
             });
         });
 
